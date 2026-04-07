@@ -1,0 +1,389 @@
+@use '../utils' as *;
+
+/*
+ ::::::::::::::::::::::::::
+  JOB POST AREA CSS
+ ::::::::::::::::::::::::::
+ */
+
+// ==== job post area ====
+
+ .job-post-box {
+    border-radius: 8px;
+    border: 1px solid var(--vtc-bg-common-bg10);
+    padding: 20px 16px;
+    transition: all .4s;
+
+    .divider {
+        background-color: var(--vtc-bg-common-bg10);
+        width: 100%;
+        height: 1px;
+        margin: 28px 0px;
+    }
+    .tag {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 5px;
+        background-color: var(--vtc-bg-common-bg1);
+        color: var(--vtc-text-heading-text-1);
+        font-size: var(--f-fs-font-fs16);
+        font-style: normal;
+        font-weight: var(--f-fw-medium);
+        line-height: var(--f-fs-font-fs16); /* 100% */
+    }
+    .job-owners-area {
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+        .text {
+            padding-left: 10px;
+            a {
+                color: var(--vtc-text-heading-text-1);
+                font-size: var(--f-fs-font-fs18);
+                font-style: normal;
+                font-weight: var(--f-fw-bold);
+                line-height: var(--f-fs-font-fs18); /* 100% */
+                transition: all .4s;
+
+                &:hover {
+                    color: var(--vtc-bg-main-bg-1);
+                }
+            }
+            p {
+                color: var(--vtc-text-pera-text-1);
+                font-size: var(--f-fs-font-fs16);
+                font-style: normal;
+                font-weight: var(--f-fw-medium);
+                line-height: var(--f-fs-font-fs16); /* 100% */
+                padding-top: 6px;
+            }
+        }
+    }
+    .work-info {
+        h5 {
+            color: var(--vtc-text-heading-text-1);
+            font-size: var(--f-fs-font-fs18);
+            font-style: normal;
+            font-weight: var(--f-fw-bold);
+            line-height: var(--f-fs-font-fs18); /* 100% */
+        }
+        h6 {
+            color: var(--vtc-bg-main-bg-1);
+            font-size: var(--f-fs-font-fs16);
+            font-style: normal;
+            font-weight: var(--f-fw-bold);
+            line-height: var(--f-fs-font-fs16); /* 100% */
+            padding-top: 12px;
+        }
+        span {
+            display: inline-block;
+            color: var(--vtc-text-pera-text-1);
+            font-size: var(--f-fs-font-fs16);
+            font-style: normal;
+            font-weight: var(--f-fw-medium);
+            line-height: var(--f-fs-font-fs16); /* 100% */
+            padding-top: 24px;
+        }
+    }
+    .button {
+        margin-top: 12px;
+    }
+    &.mt-30 {
+        margin-top: 30px;
+    }
+
+    &:hover {
+        transition: all .4s;
+        transform: translateY(-10px);
+        border: 1px solid var(--vtc-text-text-white-text-1);
+        box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.08);
+    }
+ }
+
+ // ==== job post area ====
+
+ // ==== job post details area ====
+
+ .job-sidebar {
+    background-color: var(--vtc-bg-common-bg2);
+    border-radius: 4px;
+    padding: 32px 20px;
+
+    ._job_widget {
+        background-color: var(--vtc-text-text-white-text-1);
+        border-radius: 4px;
+        padding: 24px;
+        h3 {
+            color: var(--vtc-text-heading-text-1);
+            font-size: var(--f-fs-font-fs24);
+            font-style: normal;
+            font-weight: var(--f-fw-bold);
+            line-height: var(--f-fs-font-fs24); /* 100% */
+            margin-bottom: 22px;
+        }
+
+        &._search {
+            position: relative;
+            input {
+                background-color: var(--vtc-bg-common-bg2);
+                padding: 16px;
+                border-radius: 4px;
+                width: 100%;
+                border: none;
+
+                &::placeholder {
+                    color: var(--vtc-text-heading-text-1);
+                    font-size: var(--f-fs-font-fs18);
+                    font-style: normal;
+                    font-weight: var(--f-fw-medium);
+                    line-height: var(--f-fs-font-fs18); /* 100% */
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            button {
+                border: none;
+                background: none;
+                font-size: var(--f-fs-font-fs18);
+                position: absolute;
+                top: 17px;
+                right: 13px;
+            }
+        }
+
+        &._cetegories {
+            ._cetegories-list {
+                li {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: var(--vtc-text-heading-text-1);
+                        font-size: var(--f-fs-font-fs20);
+                        line-height: var(--f-fs-font-fs20);
+                        font-weight: var(--f-fw-bold);
+                        transition: all .4s;
+                        background-color: var(--vtc-bg-common-bg2);
+                        padding: 20px 24px;
+                        margin-bottom: 20px;
+                        border-radius: 4px;
+    
+                        &:hover {
+                            background-color: var(--vtc-bg-main-bg-1);
+                            transition: all .4s;
+                            color: var(--vtc-bg-bg-white);
+                        }
+                    }
+                }
+            }
+        }
+
+        &._recent-job {
+            .recent-job-list {
+                .recent-job-single {
+                    padding: 20px 0px;
+                    border-top: 1px solid var(--vtc-bg-common-bg10);
+                    h4 {
+                        color: var(--vtc-text-heading-text-1);
+                        font-size: var(--f-fs-font-fs20);
+                        font-style: normal;
+                        font-weight: var(--f-fw-semibold);
+                        line-height: var(--f-fs-font-fs20); /* 100% */
+                    }
+                    p {
+                        color: var(--vtc-text-pera-text-1);
+                        font-size: var(--f-fs-font-fs16);
+                        font-style: normal;
+                        font-weight: var(--f-fw-medium);
+                        line-height: var(--f-fs-font-fs16); /* 100% */
+                        padding-top: 12px;
+                    }
+                }
+            }
+        }
+        
+        &._call-btn {
+            background-color: var(--vtc-bg-main-bg-1);
+            padding: 32px 24px;
+            border-radius: 4px;
+
+        h3 {
+            color: var(--vtc-bg-bg-white);
+            font-size: var(--f-fs-font-fs24);
+            line-height: var(--f-fs-font-fs30);
+            font-weight: var(--f-fw-bold);
+            transition: all .4s;
+        }
+
+        .call-btn {
+            display: inline-block;
+            background-color: var(--vtc-bg-bg-white);
+            border-radius: 4px;
+            padding: 19px 16px 16px 16px;
+            width: 100%;
+            text-align: center;
+            color: var(--vtc-bg-main-bg-1);
+            font-size: var(--f-fs-font-fs18);
+            line-height: var(--f-fs-font-fs18);
+            font-weight: var(--f-fw-bold);
+            transition: all .4s;
+            img {
+                margin-top: -3px;
+                margin-right: 3px;
+            }
+
+            &:hover {
+                transition: all .4s;
+                transform: translateY(-5px);
+            }
+         }
+        }
+
+        &.mt-40 {
+            margin-top: 40px;
+        }
+    }
+ }
+
+ // ==== job post details area ====
+
+ .job-details-area {
+    .tags-area{
+        ul {
+            li {
+                display: inline-block;
+            }
+            .tag {
+                display: inline-block;
+                padding: 8px 12px;
+                border-radius: 5px;
+                background-color: var(--vtc-bg-common-bg1);
+                color: var(--vtc-text-heading-text-1);
+                font-size: var(--f-fs-font-fs16);
+                font-style: normal;
+                font-weight: var(--f-fw-medium);
+                line-height: var(--f-fs-font-fs16); /* 100% */
+            }
+            .add-icon {
+                display: inline-flex;
+                align-items: center;
+                padding-left: 22px;
+                .icon {
+                    background-color: var(--vtc-bg-common-bg1);
+                    height: 30px;
+                    width: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                    border-radius: 50%;
+                    margin-right: 8px;
+                }
+                color: var(--vtc-text-pera-text-1);
+                font-size: var(--f-fs-font-fs16);
+                font-style: normal;
+                font-weight: var(--f-fw-medium);
+                line-height: var(--f-fs-font-fs16); /* 100% */
+            }
+        }
+    }
+    .job-owner {
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+        .text {
+            padding-left: 20px;
+            h4 {
+                color: var(--vtc-text-heading-text-1);
+                font-size: var(--f-fs-font-fs32);
+                font-style: normal;
+                font-weight: var(--f-fw-bold);
+                line-height: var(--f-fs-font-fs32); /* 100% */
+            }
+        }
+    }
+
+    .image {
+        img {
+            width: 100%;
+        }
+    }
+    .job-detials-list {
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                margin-top: 12px;
+                span {
+                    height: 20px;
+                    width: 20px;
+                    text-align: center;
+                    line-height: 20px;
+                    background-color: var(--vtc-bg-main-bg-1);
+                    border-radius: 50%;
+                    color: var(--vtc-bg-bg-white);
+                    display: inline-block;
+                    font-size: 12px;
+                    margin-right: 6px;
+                }
+                color: var(--vtc-text-pera-text-1);
+                font-size: var(--f-fs-font-fs18);
+                line-height: var(--f-fs-font-fs28);
+                font-weight: var(--f-fw-medium);
+                transition: all .4s;
+            }
+        }
+    }
+
+    .social-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        @media #{$xs} {
+            display: block;
+        }
+        .button {
+            @media #{$xs} {
+                margin-top: 20px;
+            }
+        }
+        .icons {
+            ul {
+                li {
+                    display: inline-block;
+                    a {
+                        display: inline-block;
+                        height: 32px;
+                        text-align: center;
+                        width: 32px;
+                        line-height: 32px;
+                        background-color: var(--vtc-bg-common-bg1);
+                        border-radius: 50%;
+                        color: var(--vtc-bg-main-bg-1);
+                        margin-left: 5px;
+                        transition: all .4s;
+                        &:hover {
+                            color: var(--vtc-text-text-white-text-1);
+                            background-color: var(--vtc-bg-main-bg-1);
+                            transition: all .4s;
+                        }
+                    }
+                }
+                .text {
+                    color: var(--vtc-text-heading-text-1);
+                    font-size: var(--f-fs-font-fs32);
+                    font-style: normal;
+                    font-weight: var(--f-fw-bold);
+                    line-height: var(--f-fs-font-fs32); /* 100% */
+                }
+            }
+        }
+    }
+ }
+
+ /*
+ ::::::::::::::::::::::::::
+  JOB POST AREA CSS
+ ::::::::::::::::::::::::::
+ */

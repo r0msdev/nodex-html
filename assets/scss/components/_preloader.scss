@@ -1,0 +1,132 @@
+
+@use '../utils' as *;
+
+   /*
+ ::::::::::::::::::::::::::
+  PRELOADER AREA CSS
+ ::::::::::::::::::::::::::
+ */
+
+ .preloader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.preloader.preloader2{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	background-color: #00002D;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loading-container,
+.loading{
+	height: 100px;
+	position: relative;
+	width: 100px;
+	border-radius: 100%;
+}
+
+.loading-container{
+	margin: 40px auto
+}
+
+.loading{
+	border: 1px solid transparent;
+	border-color: transparent #FF7A01 transparent #FF7A01;
+	animation: rotate-loading 1.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+
+.loading.loading2{
+	border: 1px solid transparent;
+	border-color: transparent #19326A transparent #19326A;
+	animation: rotate-loading 1.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+
+.loading.loading3{
+	border: 1px solid transparent;
+	border-color: transparent #FC253F transparent #FC253F;
+	animation: rotate-loading 1.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+
+.loading.loading6{
+	border: 1px solid transparent;
+	border-color: transparent #3F5F34 transparent #3F5F34;
+	animation: rotate-loading 1.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+
+.loading.loading7{
+	border: 1px solid transparent;
+	border-color: transparent #5957E5 transparent #5957E5;
+	animation: rotate-loading 1.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+
+.loading.loading8{
+	border: 1px solid transparent;
+	border-color: transparent #141339 transparent #141339;
+	animation: rotate-loading 1.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+
+.loading.loading9{
+	border: 1px solid transparent;
+	border-color: transparent #2A9134 transparent #2A9134;
+	animation: rotate-loading 1.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+
+.loading.loading10 {
+	border: 1px solid transparent;
+	border-color: transparent #FA6444 transparent #FA6444;
+	animation: rotate-loading 1.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+
+
+.loading-container:hover .loading,
+.loading-container .loading{
+	transition: all 0.5s ease-in-out;
+}
+
+#loading-icon{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-width: 66px;
+	transform: translate(-50%, -50%);
+}
+
+@keyframes rotate-loading{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+    /*
+ ::::::::::::::::::::::::::
+  PRELOADER AREA CSS
+ ::::::::::::::::::::::::::
+ */
