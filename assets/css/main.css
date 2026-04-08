@@ -4005,7 +4005,7 @@ body.body {
   margin-top: 32px;
 }
 .about-page-sec1 .about3-icon-box .icon {
-  background-color: #FFF2E6;
+  background-color: rgba(39, 105, 87, 0.1);
   border-radius: 50%;
   height: 70px;
   width: 70px;
@@ -4014,6 +4014,7 @@ body.body {
   transition: all 0.4s;
 }
 .about-page-sec1 .about3-icon-box .icon img {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(40%) saturate(700%) hue-rotate(118deg) brightness(85%);
   transition: all 0.4s;
 }
 .about-page-sec1 .about3-icon-box .heading1 {
