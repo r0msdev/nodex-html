@@ -1692,12 +1692,12 @@ body.body {
 */
 .heading1-w span.span {
   display: inline-block;
-  color: var(--vtc-text-text-white-text-1);
+  color: #9ADCC5;
   font-size: var(--f-fs-font-fs16);
   line-height: var(--f-fs-font-fs16);
   font-weight: var(--f-fw-medium);
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.1764705882);
+  background-color: rgba(154, 220, 197, 0.15);
   padding: 8px 12px;
   margin-bottom: 16px;
 }
@@ -1740,7 +1740,7 @@ body.body {
   line-height: var(--f-fs-font-fs16);
   font-weight: var(--f-fw-medium);
   border-radius: 4px;
-  background-color: rgba(39, 105, 87, 0.1568627451);
+  background-color: #9ADCC5;
   padding: 8px 12px;
   margin-bottom: 16px;
 }
@@ -2738,10 +2738,10 @@ body.body {
   font-weight: var(--f-fw-bold);
   font-size: var(--f-fs-font-fs16);
   line-height: var(--f-fs-font-fs16);
-  color: var(--vtc-text-text-white-text-1);
+  color: var(--vtc-text-heading-text-1);
   text-transform: capitalize;
   padding: 18px 22px 18px 22px;
-  background-color: var(--vtc-bg-main-bg-1);
+  background-color: #9ADCC5;
   overflow: hidden;
   z-index: 1;
   border-radius: 4px;
@@ -2753,7 +2753,7 @@ body.body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #9ADCC5;
+  background-color: var(--vtc-bg-main-bg-1);
   background-position: left center;
   transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
@@ -2896,10 +2896,10 @@ body.body {
   font-weight: var(--f-fw-bold);
   font-size: var(--f-fs-font-fs16);
   line-height: var(--f-fs-font-fs16);
-  color: var(--vtc-text-text-white-text-1);
+  color: var(--vtc-text-heading-text-1);
   text-transform: capitalize;
   padding: 18px 22px 18px 22px;
-  background-color: var(--vtc-bg-main-bg-1);
+  background-color: #9ADCC5;
   overflow: hidden;
   z-index: 1;
   border-radius: 4px;
@@ -2911,7 +2911,7 @@ body.body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #1a3d35;
+  background-color: var(--vtc-bg-main-bg-1);
   background-position: left center;
   transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
@@ -4005,7 +4005,7 @@ body.body {
   margin-top: 32px;
 }
 .about-page-sec1 .about3-icon-box .icon {
-  background-color: rgba(39, 105, 87, 0.1);
+  background-color: rgba(154, 220, 197, 0.25);
   border-radius: 50%;
   height: 70px;
   width: 70px;
@@ -4057,7 +4057,7 @@ body.body {
 .mission .mission-box .icon {
   height: 60px;
   width: 60px;
-  background-color: rgba(39, 105, 87, 0.1294117647);
+  background-color: rgba(154, 220, 197, 0.25);
   text-align: center;
   line-height: 60px;
   border-radius: 50%;
@@ -4725,7 +4725,7 @@ body.body {
   right: -30px;
   height: 600px;
   width: 600px;
-  background-color: var(--vtc-bg-main-bg-1);
+  background-color: #9ADCC5;
   border-radius: 50%;
   opacity: 0;
   transition: all 0.4s;
@@ -4744,6 +4744,15 @@ body.body {
   transform: translateY(0);
   transition: all 0.4s;
 }
+.service1-box:hover .hover-area p {
+  color: var(--vtc-text-heading-text-1);
+}
+.service1-box:hover .hover-area h4 a {
+  color: var(--vtc-text-heading-text-1);
+}
+.service1-box:hover .hover-area .icon img {
+  filter: brightness(0);
+}
 
 .service1-box.active .hover-area {
   position: absolute;
@@ -4755,7 +4764,13 @@ body.body {
   z-index: 2;
 }
 .service1-box.active .hover-area p {
-  color: rgba(255, 255, 255, 0.7882352941);
+  color: var(--vtc-text-heading-text-1);
+}
+.service1-box.active .hover-area h4 a {
+  color: var(--vtc-text-heading-text-1);
+}
+.service1-box.active .hover-area .icon img {
+  filter: brightness(0);
 }
 .service1-box.active::after {
   content: "";
@@ -4764,7 +4779,7 @@ body.body {
   right: -30px;
   height: 600px;
   width: 600px;
-  background-color: var(--vtc-bg-main-bg-1);
+  background-color: #9ADCC5;
   border-radius: 50%;
   opacity: 1;
   transition: all 0.4s;
@@ -8375,7 +8390,7 @@ body.body {
   line-height: var(--f-fs-font-fs16);
   font-weight: var(--f-fw-medium);
   border-radius: 4px;
-  background-color: rgba(39, 105, 87, 0.1568627451);
+  background-color: rgba(154, 220, 197, 0.25);
   padding: 8px 12px;
   margin-bottom: 16px;
 }
@@ -10477,7 +10492,7 @@ body.body {
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
-  background-color: rgba(39, 105, 87, 0.1568627451);
+  background-color: rgba(154, 220, 197, 0.25);
   margin: 0px 3px;
   color: var(--vtc-text-heading-text-1);
   transition: all 0.4s;
@@ -10742,7 +10757,7 @@ body.body {
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
-  background-color: rgba(39, 105, 87, 0.1568627451);
+  background-color: rgba(154, 220, 197, 0.25);
   margin: 0px 3px;
   color: var(--vtc-text-heading-text-1);
   transition: all 0.4s;
@@ -11548,7 +11563,7 @@ body.body {
 }
 .tes1 .tes1-slider .single-slider ul.stars li {
   display: inline-block;
-  background-color: rgba(39, 105, 87, 0.1294117647);
+  background-color: rgba(154, 220, 197, 0.25);
   height: 32px;
   width: 32px;
   line-height: 32px;
@@ -13272,7 +13287,7 @@ body.body {
   transition: all 0.4s;
 }
 .work1 .work1-box .icon {
-  background-color: var(--vtc-bg-main-bg-1);
+  background-color: #9ADCC5;
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -13290,7 +13305,7 @@ body.body {
 .work1 .work1-box:hover {
   transition: all 0.4s;
   transform: translateY(-10px);
-  background-color: var(--vtc-bg-main-bg-1);
+  background-color: #9ADCC5;
 }
 .work1 .work1-box:hover .icon {
   background-color: var(--vtc-bg-bg-white);
@@ -13298,14 +13313,14 @@ body.body {
 }
 .work1 .work1-box:hover .icon img {
   transition: all 0.4s;
-  filter: brightness(0) saturate(100%) invert(32%) sepia(40%) saturate(700%) hue-rotate(118deg) brightness(85%);
+  filter: brightness(0);
 }
 .work1 .work1-box:hover .heading1 h4 a {
   transition: all 0.4s;
-  color: var(--vtc-bg-bg-white);
+  color: var(--vtc-text-heading-text-1);
 }
 .work1 .work1-box:hover .heading1 p {
-  color: rgba(255, 255, 255, 0.8431372549);
+  color: var(--vtc-text-heading-text-1);
   transition: all 0.4s;
 }
 .work1 .work-img img {
@@ -14140,7 +14155,7 @@ body.body {
   color: var(--vtc-bg-main-bg-1);
 }
 .blog1-box .heading-area .heading1 .blog1-border {
-  background-color: rgba(39, 105, 87, 0.1647058824);
+  background-color: rgba(154, 220, 197, 0.25);
   width: 100%;
   height: 1px;
   margin-top: 20px;
