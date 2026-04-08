@@ -2571,7 +2571,7 @@ body.body {
   text-align: center;
   line-height: 56px;
   font-size: 18px;
-  color: #03256c;
+  color: var(--vtc-bg-main-bg-2);
   left: 0;
   top: 0;
   height: 56px;
@@ -2613,7 +2613,7 @@ body.body {
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: #03256c; /* --- Lijn progres kleur --- */
+  stroke: var(--vtc-bg-main-bg-2); /* --- Lijn progres kleur --- */
   stroke-width: 4;
   box-sizing: border-box;
   transition: all 200ms linear;
@@ -2800,6 +2800,18 @@ body.body {
   display: inline-block;
 }
 
+.hero1-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+@media (max-width: 767px) {
+  .hero1-buttons {
+    flex-wrap: wrap;
+  }
+}
+
 .theme-btn2 {
   position: relative;
   display: inline-block;
@@ -2826,8 +2838,7 @@ body.body {
 @media (max-width: 767px) {
   .theme-btn2 {
     margin-left: 0;
-    margin-right: 30px;
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 .theme-btn2::before {
