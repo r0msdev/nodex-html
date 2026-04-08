@@ -7419,6 +7419,9 @@ body.body {
   border-radius: 50%;
   margin-right: 20px;
 }
+.contact1 .contact1-box .icon img {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(40%) saturate(700%) hue-rotate(118deg) brightness(85%);
+}
 .contact1 .contact1-box .heading p {
   color: var(--vtc-text-pera-text-1);
   font-weight: var(--f-fw-medium);
@@ -13279,7 +13282,6 @@ body.body {
 }
 .work1 .work1-box .icon img {
   transition: all 0.4s;
-  filter: brightness(0) invert(1);
 }
 .work1 .work1-box .heading1 h4 a {
   padding-bottom: 10px;
@@ -13295,7 +13297,7 @@ body.body {
 }
 .work1 .work1-box:hover .icon img {
   transition: all 0.4s;
-  filter: none;
+  filter: brightness(0) saturate(100%) invert(32%) sepia(40%) saturate(700%) hue-rotate(118deg) brightness(85%);
 }
 .work1 .work1-box:hover .heading1 h4 a {
   transition: all 0.4s;
