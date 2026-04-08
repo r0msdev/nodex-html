@@ -1,36 +1,36 @@
 $colors: (
     'text': (
-        'heading-text-1': #1A1A1A, // on-background — near black
-        'heading-text-2': #1A1A1A, // dark heading
-        'heading-text-3': #1A1A1A, // on-background
-        'pera-text-1': #666666,   // body text — mid grey
-        'pera-text-2': #F5F5F5,   // text on dark overlays
-        'pera-text-3': #666666,   // body text variant
+        'heading-text-1': #2d3435, // on-background — soft ink, never pure black
+        'heading-text-2': #276957, // primary — teal for secondary headings
+        'heading-text-3': #2d3435, // on-background
+        'pera-text-1': #637074,   // body text — subdued on-surface
+        'pera-text-2': #CCCCD5,   // text on dark overlays — keep for dark sections
+        'pera-text-3': #637074,   // body text variant
         'text-white-text-1': #ffffff,
     ),
     'bg': (
-        'main-bg-1': #1A1A1A,     // primary dark
-        'main-bg-2': #9ADCC5,     // accent / NodeX green
+        'main-bg-1': #276957,     // primary
+        'main-bg-2': #9ADCC5,     // accent / mint
         'main-bg-3': #9ADCC5,     // accent / hover gradient end
-        'main-bg-4': #000000,     // pure black (overlays)
-        'main-bg-5': #1A1A1A,     // primary dark
-        'main-bg-6': #9ADCC5,     // accent / NodeX green
+        'main-bg-4': #1a3d35,     // dark primary tint (overlays)
+        'main-bg-5': #276957,     // primary
+        'main-bg-6': #9ADCC5,     // accent / mint
         'common-bg1': #ffffff,    // surface-container-lowest
-        'common-bg2': #F5F5F5,    // surface
-        'common-bg3': #E8E8E8,    // surface-container-high
-        'common-bg4': #F0F0F0,    // surface-container-low
-        'common-bg5': #F5F5F5,    // surface
-        'common-bg6': #E8E8E8,    // surface-container-high
-        'common-bg7': #F0F0F0,    // surface-container-low
-        'common-bg8': #E8E8E8,    // surface-container-high
-        'common-bg9': #F0F0F0,    // surface-container-low
-        'common-bg10': #D4D4D4,   // outline-variant
-        'common-bg11': #666666,   // body text / muted
+        'common-bg2': #f9f9f9,    // surface
+        'common-bg3': #e4e9ea,    // surface-container-high
+        'common-bg4': #f2f4f4,    // surface-container-low
+        'common-bg5': #f9f9f9,    // surface
+        'common-bg6': #e4e9ea,    // surface-container-high
+        'common-bg7': #f2f4f4,    // surface-container-low
+        'common-bg8': #e4e9ea,    // surface-container-high
+        'common-bg9': #f2f4f4,    // surface-container-low
+        'common-bg10': #d0d8d8,   // outline-variant
+        'common-bg11': #637074,   // body text / muted
         'bg-white': #ffffff,
     ),
     'border': (
-        'border-1': #E5E5E5,      // ghost border
-        'border-2': #CCCCCC,      // ghost border visible
+        'border-1': #e4e9ea,      // ghost border (surface-container-high)
+        'border-2': #d0d8d8,      // ghost border visible
     )
 );
 
