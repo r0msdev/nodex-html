@@ -1615,33 +1615,33 @@ body.body {
  ::::::::::::::::::::::::::
  */
 :root {
-  --vtc-text-heading-text-1: #2d3435;
-  --vtc-text-heading-text-2: #276957;
-  --vtc-text-heading-text-3: #2d3435;
-  --vtc-text-pera-text-1: #637074;
-  --vtc-text-pera-text-2: #CCCCD5;
-  --vtc-text-pera-text-3: #637074;
+  --vtc-text-heading-text-1: #1A1A1A;
+  --vtc-text-heading-text-2: #1A1A1A;
+  --vtc-text-heading-text-3: #1A1A1A;
+  --vtc-text-pera-text-1: #666666;
+  --vtc-text-pera-text-2: #F5F5F5;
+  --vtc-text-pera-text-3: #666666;
   --vtc-text-text-white-text-1: #ffffff;
-  --vtc-bg-main-bg-1: #276957;
+  --vtc-bg-main-bg-1: #1A1A1A;
   --vtc-bg-main-bg-2: #9ADCC5;
   --vtc-bg-main-bg-3: #9ADCC5;
-  --vtc-bg-main-bg-4: #1a3d35;
-  --vtc-bg-main-bg-5: #276957;
+  --vtc-bg-main-bg-4: #000000;
+  --vtc-bg-main-bg-5: #1A1A1A;
   --vtc-bg-main-bg-6: #9ADCC5;
   --vtc-bg-common-bg1: #ffffff;
-  --vtc-bg-common-bg2: #f9f9f9;
-  --vtc-bg-common-bg3: #e4e9ea;
-  --vtc-bg-common-bg4: #f2f4f4;
-  --vtc-bg-common-bg5: #f9f9f9;
-  --vtc-bg-common-bg6: #e4e9ea;
-  --vtc-bg-common-bg7: #f2f4f4;
-  --vtc-bg-common-bg8: #e4e9ea;
-  --vtc-bg-common-bg9: #f2f4f4;
-  --vtc-bg-common-bg10: #d0d8d8;
-  --vtc-bg-common-bg11: #637074;
+  --vtc-bg-common-bg2: #F5F5F5;
+  --vtc-bg-common-bg3: #E8E8E8;
+  --vtc-bg-common-bg4: #F0F0F0;
+  --vtc-bg-common-bg5: #F5F5F5;
+  --vtc-bg-common-bg6: #E8E8E8;
+  --vtc-bg-common-bg7: #F0F0F0;
+  --vtc-bg-common-bg8: #E8E8E8;
+  --vtc-bg-common-bg9: #F0F0F0;
+  --vtc-bg-common-bg10: #D4D4D4;
+  --vtc-bg-common-bg11: #666666;
   --vtc-bg-bg-white: #ffffff;
-  --vtc-border-border-1: #e4e9ea;
-  --vtc-border-border-2: #d0d8d8;
+  --vtc-border-border-1: #E5E5E5;
+  --vtc-border-border-2: #CCCCCC;
   --f-fw-regular: 400;
   --f-fw-medium: 500;
   --f-fw-semibold: 600;
@@ -2774,7 +2774,7 @@ body.body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #1a3d35;
+  background-color: #000000;
   transform: scaleY(0);
   transform-origin: center;
   transform-style: preserve-3d;
@@ -2858,7 +2858,7 @@ body.body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #1a3d35;
+  background-color: #000000;
   transform: scaleY(0);
   transform-origin: center;
   transform-style: preserve-3d;
@@ -2911,7 +2911,7 @@ body.body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #1a3d35;
+  background-color: #000000;
   background-position: left center;
   transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
@@ -3278,7 +3278,7 @@ body.body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #1a3d35;
+  background-color: #000000;
   transform: scaleY(0);
   transform-origin: center;
   transform-style: preserve-3d;
@@ -3412,7 +3412,7 @@ body.body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #1a3d35;
+  background-color: #000000;
   background-position: left center;
   transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
@@ -3671,7 +3671,7 @@ body.body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #1a3d35;
+  background-color: #000000;
   transform: scaleY(0);
   transform-origin: center;
   transform-style: preserve-3d;
@@ -3992,7 +3992,7 @@ body.body {
   font-weight: var(--f-fw-medium);
 }
 .about-page-sec1 .conter-box1 {
-  background-color: #2d3435;
+  background-color: #1A1A1A;
   margin-top: 30px;
 }
 .about-page-sec1 .conter-box2 {
