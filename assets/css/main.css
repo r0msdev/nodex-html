@@ -4795,6 +4795,12 @@ body.body {
   opacity: 1;
   transition: all 0.4s;
 }
+@media (max-width: 991px) {
+  .service1-box:hover::after,
+  .service1-box.active::after {
+    bottom: -300px;    
+  }
+}
 
 .service2-box {
   margin-top: 60px;
@@ -7467,6 +7473,14 @@ body.body {
 .contact1 .contact1-box .heading a:hover {
   color: var(--vtc-bg-main-bg-1);
   transition: all 0.4s;
+}
+@media (max-width: 991px) {
+  .contact1 .heading1-w {
+    padding-right: 0;
+  }
+  .contact1 .contact1-form {
+    margin-top: 30px;
+  }
 }
 .contact1 .contact1-form {
   background-color: var(--vtc-bg-bg-white);
