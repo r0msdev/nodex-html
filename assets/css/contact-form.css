@@ -1,8 +1,12 @@
 /* ============================
-   CONTACT PAGE SPACING
+   INNER PAGE SPACING
    ============================ */
 .contact-page.sp {
-  padding-top: 60px;
+  padding-top: 30px;
+}
+
+.about-page-sec1.sp {
+  padding-top: 30px;
 }
 
 /* ============================
