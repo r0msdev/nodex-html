@@ -1,4 +1,11 @@
 /* ============================
+   MOBILE NAV — SUB-MENU COLLAPSED BY DEFAULT
+   ============================ */
+.mobile-nav li ul {
+  display: none;
+}
+
+/* ============================
    INNER PAGE SPACING
    ============================ */
 .contact-page.sp {
@@ -7,6 +14,29 @@
 
 .about-page-sec1.sp {
   padding-top: 30px;
+}
+
+/* ============================
+   COMMON HERO — SMALLER + HIDDEN ON MOBILE
+   ============================ */
+.common-hero {
+  height: 250px;
+}
+.common-hero .main-heading {
+  padding-top: 50px;
+}
+
+@media (max-width: 991px) {
+  .common-hero {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    height: auto;
+  }
+  .contact-page.sp,
+  .about-page-sec1.sp,
+  .service-intro-band {
+    padding-top: 50px;
+  }
 }
 
 /* ============================
