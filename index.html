@@ -505,18 +505,17 @@
 
   <!--=====WORK AREA END=======-->
 
-  <!--=====CONTACT AREA START=======-->
+  <!--=====WORK WITH US AREA START=======-->
 
   <div class="contact1 sp">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="heading1-w">
-            <span class="span" data-aos="zoom-in-left" data-aos-duration="700">Contact Us</span>
-            <h2 class="text-anime-style-3">Let's Talk About Your Technology Challenges</h2>
+            <span class="span" data-aos="zoom-in-left" data-aos-duration="700">Join Our Team</span>
+            <h2 class="text-anime-style-3">Work With Us</h2>
             <div class="space16"></div>
-            <p data-aos="fade-right" data-aos-duration="900">Whether you're facing technical bottlenecks, need to scale
-              your team, or want to build a strategic product — we'd love to understand your context and help.</p>
+            <p data-aos="fade-right" data-aos-duration="900">We're always looking for senior technical talent. If you thrive in complex environments and want to be part of something ambitious — send us your CV and we'll keep you in mind for upcoming opportunities.</p>
 
             <div class="" data-aos="fade-right" data-aos-duration="1100">
               <div class="contact1-box">
@@ -536,17 +535,17 @@
         <div class="col-lg-6">
           <div class="contact1-form" data-aos="zoom-out" data-aos-duration="900">
             <div class="heading1">
-              <h3>Send us a Message</h3>
+              <h3>Send Your Application</h3>
               <div class="space16"></div>
-              <p>Tell us about your project or team needs and we'll get back to you shortly.</p>
+              <p>Tell us a bit about yourself and attach your CV — we'll reach out when there's a good fit.</p>
             </div>
             <div class="space10"></div>
 
-            <form action="https://n8n.nodex.es/webhook/web-contact-form" method="POST">
+            <form action="https://n8n.nodex.es/webhook/careers-form" method="POST" enctype="multipart/form-data">
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <div class="single-input">
-                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="text" name="name" placeholder="Full Name" required>
                   </div>
                 </div>
 
@@ -556,21 +555,32 @@
                   </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <div class="single-input">
-                    <input type="number" name="phone" placeholder="Phone">
+                    <input type="text" name="role" placeholder="Role / Speciality (e.g. Backend Engineer)">
                   </div>
                 </div>
 
                 <div class="col-md-12">
                   <div class="single-input">
-                    <textarea name="message" rows="4" placeholder="Message"></textarea>
+                    <textarea name="message" rows="3" placeholder="Brief introduction (optional)"></textarea>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="single-input cv-upload-wrap">
+                    <label for="cv-upload" class="cv-upload-label">
+                      <span class="cv-btn"><i class="fa-solid fa-paperclip"></i> Choose File</span>
+                      <span class="cv-filename" id="cv-filename">No file chosen</span>
+                    </label>
+                    <input type="file" id="cv-upload" name="cv" accept=".pdf,.doc,.docx" required>
                   </div>
                 </div>
 
                 <div class="col-md-12">
                   <div class="button">
-                    <button type="submit" title="Submit" class="theme-btn1">Submit Now <span><i class="fa-solid fa-arrow-right"></i></span></button>
+                    <button type="submit" title="Submit" class="theme-btn1">Send Application <span><i
+                          class="fa-solid fa-arrow-right"></i></span></button>
                   </div>
                 </div>
 
@@ -583,7 +593,7 @@
     </div>
   </div>
 
-  <!--=====CONTACT AREA END=======-->
+  <!--=====WORK WITH US AREA END=======-->
 
   <!--===== FOOTER AREA START =======-->
 

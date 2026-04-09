@@ -54,9 +54,28 @@
   document.addEventListener('DOMContentLoaded', function () {
     createPopup();
 
-    /* Matches forms inside .contact1-form (index) or .contact-page (contact page) */
+    /* File upload label — show filename and highlight border when a file is chosen */
+    var fileInput   = document.getElementById('cv-upload');
+    var fileLabel   = document.getElementById('cv-filename');
+    var uploadLabel = document.querySelector('.cv-upload-label');
+
+    if (fileInput && fileLabel) {
+      fileInput.addEventListener('change', function () {
+        if (fileInput.files.length > 0) {
+          fileLabel.textContent = fileInput.files[0].name;
+          if (uploadLabel) { uploadLabel.classList.add('has-file'); }
+        } else {
+          fileLabel.textContent = 'No file chosen';
+          if (uploadLabel) { uploadLabel.classList.remove('has-file'); }
+        }
+      });
+    }
+
+    /* Matches forms inside .contact1-form (index careers/work-with-us) or .contact-page (contact page) */
     var form = document.querySelector('.contact1-form form, .contact-page form');
     if (!form) { return; }
+
+    var isMultipart = !!form.querySelector('input[type="file"]');
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -68,18 +87,25 @@
       submitBtn.disabled  = true;
       submitBtn.innerHTML = 'Sending\u2026 <span><i class="fa-solid fa-spinner fa-spin"></i></span>';
 
-      var payload = {
-        name:    (form.querySelector('[name="name"]')    || {}).value || '',
-        email:   (form.querySelector('[name="email"]')   || {}).value || '',
-        phone:   (form.querySelector('[name="phone"]')   || {}).value || '',
-        message: (form.querySelector('[name="message"]') || {}).value || ''
-      };
+      var fetchOptions;
+      if (isMultipart) {
+        /* Careers form — send as multipart/form-data so the CV file is included */
+        fetchOptions = { method: 'POST', body: new FormData(form) };
+      } else {
+        /* Contact form — send as JSON */
+        fetchOptions = {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({
+            name:    (form.querySelector('[name="name"]')    || {}).value || '',
+            email:   (form.querySelector('[name="email"]')   || {}).value || '',
+            phone:   (form.querySelector('[name="phone"]')   || {}).value || '',
+            message: (form.querySelector('[name="message"]') || {}).value || ''
+          })
+        };
+      }
 
-      fetch(action, {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(payload)
-      })
+      fetch(action, fetchOptions)
         .then(function (res) {
           if (!res.ok && res.status !== 200) {
             return { status: 'fail', error: 'Server returned ' + res.status };
@@ -88,8 +114,14 @@
         })
         .then(function (json) {
           if (json.status === 'ok') {
-            showPopup('ok', 'Message sent!', "Thanks for reaching out \u2014 we\u2019ll get back to you shortly.");
+            var msg = isMultipart
+              ? 'Thanks for your interest \u2014 we\u2019ll be in touch if there\u2019s a good fit.'
+              : 'Thanks for reaching out \u2014 we\u2019ll get back to you shortly.';
+            var title = isMultipart ? 'Application sent!' : 'Message sent!';
+            showPopup('ok', title, msg);
             form.reset();
+            if (fileLabel) { fileLabel.textContent = 'No file chosen'; }
+            if (uploadLabel) { uploadLabel.classList.remove('has-file'); }
           } else {
             showPopup('fail', 'Something went wrong', json.error || 'Please try again or email us directly at info@nodex.es.');
           }

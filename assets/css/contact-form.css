@@ -57,3 +57,82 @@
   border: none;
   cursor: pointer;
 }
+
+/* ============================
+   CV FILE UPLOAD
+   ============================ */
+.cv-upload-wrap {
+  position: relative;
+}
+
+.cv-upload-wrap input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.cv-upload-label {
+  display: flex;
+  align-items: stretch;
+  margin-top: 14px;
+  border: 1.5px solid #E6E7E9;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+.cv-upload-label:hover {
+  border-color: var(--vtc-bg-main-bg-2);
+}
+
+.cv-upload-label.has-file {
+  border-color: var(--vtc-bg-main-bg-2);
+}
+
+/* Green "Choose File" button side */
+.cv-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background-color: var(--vtc-bg-main-bg-2);
+  color: var(--vtc-text-heading-text-1);
+  font-size: var(--f-fs-font-fs16);
+  font-weight: var(--f-fw-semibold);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.3s;
+}
+
+.cv-upload-label:hover .cv-btn {
+  background-color: var(--vtc-bg-main-bg-1);
+}
+
+.cv-btn i {
+  font-size: 15px;
+}
+
+/* Filename display side */
+.cv-filename {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  color: #525863;
+  font-size: var(--f-fs-font-fs16);
+  font-weight: var(--f-fw-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+}
+
+.cv-upload-label.has-file .cv-filename {
+  color: var(--vtc-text-heading-text-1);
+  font-weight: var(--f-fw-semibold);
+}
