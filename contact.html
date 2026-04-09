@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="assets/css/aos.css">
   <link rel="stylesheet" href="assets/css/mobile-menu.css">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/contact-form.css">
 
 
 
@@ -207,35 +208,35 @@
             </div>
             <div class="space10"></div>
 
-            <form action="#">
+            <form action="https://n8n.nodex.es/webhook/web-contact-form" method="POST">
               <div class="row">
                 <div class="col-md-12">
                   <div class="single-input">
-                    <input type="text" placeholder="Name">
+                    <input type="text" name="name" placeholder="Name" required>
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="single-input">
-                    <input type="email" placeholder="Email">
+                    <input type="email" name="email" placeholder="Email" required>
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="single-input">
-                    <input type="number" placeholder="Phone">
+                    <input type="number" name="phone" placeholder="Phone">
                   </div>
                 </div>
 
                 <div class="col-md-12">
                   <div class="single-input">
-                    <textarea rows="4" placeholder="Message"></textarea>
+                    <textarea name="message" rows="4" placeholder="Message"></textarea>
                   </div>
                 </div>
 
                 <div class="col-md-12">
                   <div class="button">
-                    <button type="reset" title="Submit" class="theme-btn1">Submit Now <span><i class="fa-solid fa-arrow-right"></i></span></button>
+                    <button type="submit" title="Submit" class="theme-btn1">Submit Now <span><i class="fa-solid fa-arrow-right"></i></span></button>
                   </div>
                 </div>
 
@@ -362,8 +363,8 @@
   <script src="assets/js/text-animation.js"></script>
   <script src="assets/js/jquery.lineProgressbar.js"></script>
   <script src="assets/js/tilt.jquery.js"></script>
+  <script src="assets/js/contact-form.js"></script>
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
