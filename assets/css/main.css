@@ -4798,7 +4798,24 @@ body.body {
 @media (max-width: 991px) {
   .service1-box:hover::after,
   .service1-box.active::after {
-    bottom: -300px;    
+    bottom: -300px;
+  }
+  .service1-box .hover-area {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .service1-box::after {
+    opacity: 1;
+    bottom: -300px;
+  }
+  .service1-box .hover-area p {
+    color: var(--vtc-text-heading-text-1);
+  }
+  .service1-box .hover-area h4 a {
+    color: var(--vtc-text-heading-text-1);
+  }
+  .service1-box .hover-area .icon img {
+    filter: brightness(0);
   }
 }
 
