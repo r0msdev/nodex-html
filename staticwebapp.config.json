@@ -1,7 +1,13 @@
 {
+  "routes": [
+    {
+      "route": "/en/*",
+      "rewrite": "/en/index.html"
+    }
+  ],
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/assets/*"]
+    "exclude": ["/assets/*", "/en/*.html"]
   },
   "responseOverrides": {
     "404": {
