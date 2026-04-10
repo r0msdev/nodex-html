@@ -2,22 +2,25 @@
    HERO DECORATIVE LOGO
    ============================ */
 .hero-area1 {
-  position: relative;
   overflow: hidden;
 }
-.hero-deco-logo {
+.hero-container {
+  position: relative;
+}
+.hero-container::after {
+  content: '';
   position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 520px;
+  inset: 0;
+  background-image: url('../img/logo/logo_nodex.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 480px auto;
   opacity: 0.08;
   filter: grayscale(1);
   pointer-events: none;
-  user-select: none;
 }
 @media (max-width: 991px) {
-  .hero-deco-logo {
+  .hero-container::after {
     display: none;
   }
 }
