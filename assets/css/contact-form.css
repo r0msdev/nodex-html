@@ -1,4 +1,28 @@
 /* ============================
+   HERO DECORATIVE LOGO
+   ============================ */
+.hero-area1 {
+  position: relative;
+  overflow: hidden;
+}
+.hero-deco-logo {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 520px;
+  opacity: 0.08;
+  filter: grayscale(1);
+  pointer-events: none;
+  user-select: none;
+}
+@media (max-width: 991px) {
+  .hero-deco-logo {
+    display: none;
+  }
+}
+
+/* ============================
    MOBILE NAV — SUB-MENU COLLAPSED BY DEFAULT
    ============================ */
 .mobile-nav li ul {
