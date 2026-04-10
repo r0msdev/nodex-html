@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NodeX || About</title>
+  <title>NodeX || Join Our Team</title>
 
   <!--=====FAB ICON=======-->
   <link rel="shortcut icon" href="assets/img/logo/titel.png" type="image/x-icon">
@@ -29,7 +29,6 @@
 </head>
 
 <body class="body">
-
 
   <!-- Preloader Start -->
   <div class="preloader">
@@ -172,7 +171,6 @@
 
   <!--=====Mobile header end=======-->
 
-
   <!--=====HERO AREA START =======-->
 
   <div class="common-hero">
@@ -180,11 +178,11 @@
       <div class="row">
         <div class="col-lg-6 m-auto text-center">
           <div class="main-heading">
-            <h1>About Us</h1>
+            <h1>Join Our Team</h1>
             <div class="pages-intro">
               <a href="index.html">Home </a>
               <span><i class="fa-regular fa-angle-right"></i></span>
-              <p>About Us</p>
+              <p>Join Our Team</p>
             </div>
           </div>
         </div>
@@ -193,77 +191,82 @@
   </div>
   <!--=====HERO AREA END=======-->
 
-  <!--=====ABOUT AREA START=======-->
+  <!--=====WORK WITH US AREA START=======-->
 
-  <div class="about-page-sec1 sp">
+  <div class="contact-page sp">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="about3-images">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="image overlay-anim">
-                  <img src="assets/img/about/about-img2.png" alt="">
-                </div>
-                <div class="conter-box conter-box1">
-                  <h3><span class="counter">1590</span>+</h3>
-                  <p>Years of Experienced</p>
-                </div>
-              </div>
-
-              <div class="col-lg-6">
-                <div class="conter-box conter-box2">
-                  <h3><span class="counter">16</span>+</h3>
-                  <p>Years of Experienced</p>
-                </div>
-                <div class="image overlay-anim">
-                  <img src="assets/img/about/about-img1.png" alt="">
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="heading1 about3-heading">
-            <span class="span">About Us</span>
-            <h2>Our Story Connecting Talent, Powering Success</h2>
+        <div class="col-lg-6 align-self-start">
+          <div class="heading1">
+            <span class="span">Join Our Team</span>
+            <h2>Work With Us</h2>
             <div class="space16"></div>
-            <p>Our team of industry experts is dedicated to understanding your unique needs and delivering tailored
-              solutions that propel your business forward.</p>
-
-            <div class="about3-icon-box">
-              <div class="">
-                <div class="icon">
-                  <img src="assets/img/icons/about3-icon1.png" alt="">
-                </div>
-              </div>
-              <div class="heading1">
-                <h5><a href="#">Empowering Careers, Driving Growth</a></h5>
-                <p>we are your strategic partner in talent acquisition. With a steadfast commitment to excellence</p>
-              </div>
-            </div>
-
-            <div class="about3-icon-box">
-              <div class="">
-                <div class="icon">
-                  <img src="assets/img/icons/about3-icon2.png" alt="">
-                </div>
-              </div>
-              <div class="heading1">
-                <h5><a href="#">Leaders in Staffing Excellence</a></h5>
-                <p>Discover the difference with Your Agency Name and unlock new possibilities for growth </p>
-              </div>
-            </div>
-
+            <p>We're always looking for senior technical talent. If you thrive in complex environments and want to be part of something ambitious — send us your CV and we'll keep you in mind for upcoming opportunities.</p>
           </div>
         </div>
+
+        <div class="col-lg-6">
+          <div class="contact1-form">
+            <div class="heading1">
+              <h3>Send Your Application</h3>
+              <div class="space16"></div>
+              <p>Tell us a bit about yourself and attach your CV — we'll reach out when there's a good fit.</p>
+            </div>
+            <div class="space10"></div>
+
+            <form action="https://n8n.nodex.es/webhook/careers-form" method="POST" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="single-input">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="single-input">
+                    <input type="email" name="email" placeholder="Email" required>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="single-input">
+                    <input type="text" name="role" placeholder="Role / Speciality (e.g. Backend Engineer)">
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="single-input">
+                    <textarea name="message" rows="3" placeholder="Brief introduction (optional)"></textarea>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="single-input cv-upload-wrap">
+                    <label for="cv-upload" class="cv-upload-label">
+                      <span class="cv-btn"><i class="fa-solid fa-paperclip"></i> Choose File</span>
+                      <span class="cv-filename" id="cv-filename">No file chosen</span>
+                    </label>
+                    <input type="file" id="cv-upload" name="cv" accept=".pdf,.doc,.docx" required>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="button">
+                    <button type="submit" title="Submit" class="theme-btn1">Send Application <span><i
+                          class="fa-solid fa-arrow-right"></i></span></button>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
-  <!--=====ABOUT AREA END=======-->
+  <!--=====WORK WITH US AREA END=======-->
 
   <!--===== FOOTER AREA START =======-->
 
@@ -377,9 +380,8 @@
   <script src="assets/js/text-animation.js"></script>
   <script src="assets/js/jquery.lineProgressbar.js"></script>
   <script src="assets/js/tilt.jquery.js"></script>
+  <script src="assets/js/contact-form.js"></script>
   <script src="assets/js/main.js"></script>
-
-
 </body>
 
 </html>

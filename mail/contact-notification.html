@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  NodeX — New Contact Form Notification
+  Sent to: relations / business-development team
+  Trigger: contact form at /contact.html
+  Webhook: https://n8n.nodex.es/webhook/web-contact-form
+
+  PLACEHOLDER SYNTAX (n8n "Send Email" node — HTML body field):
+    {{ $json.name }}       → sender full name
+    {{ $json.email }}      → sender email address
+    {{ $json.phone }}      → sender phone (if field added)
+    {{ $json.subject }}    → message subject
+    {{ $json.message }}    → message body
+    {{ $now.toFormat('dd LLL yyyy, HH:mm') }} → submission timestamp
+
+  Replace placeholders with your template-engine syntax if not using n8n.
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>New Contact – NodeX</title>
+</head>
+
+<body style="margin:0; padding:0; background-color:#F5F5F5; font-family: Arial, Helvetica, sans-serif;">
+
+  <!-- Wrapper -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+         style="background-color:#F5F5F5; padding: 32px 16px;">
+    <tr>
+      <td align="center">
+
+        <!-- Card -->
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0"
+               style="max-width:600px; width:100%; background-color:#ffffff;
+                      border-radius:8px; overflow:hidden;
+                      box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+
+          <!-- ── HEADER ── -->
+          <tr>
+            <td style="background-color:#1A1A1A; padding: 32px 40px 28px; text-align:center;">
+              <p style="margin:0; font-size:28px; font-weight:700; letter-spacing:2px;
+                        color:#9ADCC5; text-transform:uppercase; font-family:Arial,sans-serif;">
+                NodeX
+              </p>
+              <p style="margin:8px 0 0; font-size:12px; color:#9ADCC5;
+                        letter-spacing:1px; text-transform:uppercase; opacity:0.7;">
+                Technical Staffing
+              </p>
+            </td>
+          </tr>
+
+          <!-- Accent bar -->
+          <tr>
+            <td style="background-color:#9ADCC5; height:4px; font-size:0; line-height:0;">&nbsp;</td>
+          </tr>
+
+          <!-- ── TITLE BAND ── -->
+          <tr>
+            <td style="background-color:#000000; padding: 18px 40px; text-align:center;">
+              <p style="margin:0; font-size:14px; font-weight:600; color:#ffffff;
+                        letter-spacing:1.5px; text-transform:uppercase;">
+                ✉ New Contact Form Submission
+              </p>
+            </td>
+          </tr>
+
+          <!-- ── BODY ── -->
+          <tr>
+            <td style="padding: 36px 40px 24px;">
+
+              <p style="margin:0 0 24px; font-size:15px; color:#666666; line-height:1.6;">
+                A visitor has reached out via the website contact form. Details below:
+              </p>
+
+              <!-- Data table -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+
+                <!-- Name -->
+                <tr>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             border-left: 3px solid #9ADCC5;
+                             font-size:11px; font-weight:700; color:#1A1A1A;
+                             text-transform:uppercase; letter-spacing:1px;
+                             width:30%; vertical-align:top;">
+                    Name
+                  </td>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             font-size:15px; color:#000000; vertical-align:top;">
+                    {{ $json.name }}
+                  </td>
+                </tr>
+
+                <tr><td colspan="2" style="height:4px; font-size:0;">&nbsp;</td></tr>
+
+                <!-- Email -->
+                <tr>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             border-left: 3px solid #9ADCC5;
+                             font-size:11px; font-weight:700; color:#1A1A1A;
+                             text-transform:uppercase; letter-spacing:1px;
+                             width:30%; vertical-align:top;">
+                    Email
+                  </td>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             font-size:15px; color:#000000; vertical-align:top;">
+                    <a href="mailto:{{ $json.email }}"
+                       style="color:#000000; text-decoration:none; font-weight:600;">
+                      {{ $json.email }}
+                    </a>
+                  </td>
+                </tr>
+
+                <tr><td colspan="2" style="height:4px; font-size:0;">&nbsp;</td></tr>
+
+                <!-- Phone (optional — remove row if field not in form) -->
+                <tr>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             border-left: 3px solid #9ADCC5;
+                             font-size:11px; font-weight:700; color:#1A1A1A;
+                             text-transform:uppercase; letter-spacing:1px;
+                             width:30%; vertical-align:top;">
+                    Phone
+                  </td>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             font-size:15px; color:#000000; vertical-align:top;">
+                    {{ $json.phone || '—' }}
+                  </td>
+                </tr>
+
+                <tr><td colspan="2" style="height:4px; font-size:0;">&nbsp;</td></tr>
+
+                <!-- Subject -->
+                <tr>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             border-left: 3px solid #9ADCC5;
+                             font-size:11px; font-weight:700; color:#1A1A1A;
+                             text-transform:uppercase; letter-spacing:1px;
+                             width:30%; vertical-align:top;">
+                    Subject
+                  </td>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             font-size:15px; color:#000000; vertical-align:top;">
+                    {{ $json.subject }}
+                  </td>
+                </tr>
+
+                <tr><td colspan="2" style="height:4px; font-size:0;">&nbsp;</td></tr>
+
+                <!-- Message -->
+                <tr>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             border-left: 3px solid #9ADCC5;
+                             font-size:11px; font-weight:700; color:#1A1A1A;
+                             text-transform:uppercase; letter-spacing:1px;
+                             width:30%; vertical-align:top;">
+                    Message
+                  </td>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             font-size:15px; color:#000000; line-height:1.7; vertical-align:top;">
+                    {{ $json.message }}
+                  </td>
+                </tr>
+
+                <tr><td colspan="2" style="height:4px; font-size:0;">&nbsp;</td></tr>
+
+                <!-- Received -->
+                <tr>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             border-left: 3px solid transparent;
+                             font-size:11px; font-weight:700; color:#666666;
+                             text-transform:uppercase; letter-spacing:1px;
+                             width:30%; vertical-align:top;">
+                    Received
+                  </td>
+                  <td style="padding: 12px 16px; background-color:#F5F5F5;
+                             font-size:13px; color:#666666; vertical-align:top;">
+                    {{ $now.toFormat('dd LLL yyyy, HH:mm') }}
+                  </td>
+                </tr>
+
+              </table>
+              <!-- / Data table -->
+
+            </td>
+          </tr>
+
+          <!-- ── CTA ── -->
+          <tr>
+            <td style="padding: 8px 40px 36px; text-align:center;">
+              <a href="mailto:{{ $json.email }}"
+                 style="display:inline-block; background-color:#9ADCC5; color:#1A1A1A;
+                        font-size:14px; font-weight:700; text-decoration:none;
+                        padding: 14px 32px; border-radius:4px; letter-spacing:0.5px;">
+                Reply to {{ $json.name }}
+              </a>
+            </td>
+          </tr>
+
+          <!-- ── FOOTER ── -->
+          <tr>
+            <td style="background-color:#1A1A1A; padding: 24px 40px; text-align:center;">
+              <p style="margin:0 0 6px; font-size:13px; color:#9ADCC5; font-weight:600;">
+                NodeX — Technical Staffing
+              </p>
+              <p style="margin:0; font-size:12px; color:#9ADCC5; opacity:0.6;">
+                <a href="mailto:info@nodex.es"
+                   style="color:#9ADCC5; text-decoration:none;">info@nodex.es</a>
+                &nbsp;·&nbsp;
+                <a href="https://nodex.es"
+                   style="color:#9ADCC5; text-decoration:none;">nodex.es</a>
+              </p>
+              <p style="margin:12px 0 0; font-size:11px; color:#9ADCC5; opacity:0.45;">
+                This is an automated notification. Do not reply directly to this message.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- / Card -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- / Wrapper -->
+
+</body>
+</html>
