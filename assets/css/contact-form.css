@@ -14,7 +14,7 @@
   background-image: url('../img/logo/logo_nodex.png');
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 480px auto;
+  background-size: 400px auto;
   opacity: 0.08;
   filter: grayscale(1);
   pointer-events: none;
@@ -41,6 +41,12 @@
 
 .about-page-sec1.sp {
   padding-top: 30px;
+}
+
+@media (max-width: 991px) {
+  .about-page-sec1 .about3-images .col-lg-6:first-child {
+    margin-bottom: 24px;
+  }
 }
 
 /* ============================

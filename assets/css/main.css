@@ -4004,11 +4004,11 @@ body.body {
 }
 .about-page-sec1 .conter-box1 {
   background-color: #2d3435;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .about-page-sec1 .conter-box2 {
   background-color: var(--vtc-bg-main-bg-1);
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 .about-page-sec1 .about3-icon-box {
   display: flex;
