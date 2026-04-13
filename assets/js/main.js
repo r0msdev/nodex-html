@@ -152,84 +152,7 @@
                 }
 
 
-                  // project style1
-                  $('.project-two__carousel').owlCarousel({
-                    "loop": true,
-                    "autoplay": true,
-                    "margin": 0,
-                    "nav": false,
-                    "dots": true,
-                    "smartSpeed": 500,
-                    "autoplayTimeout": 10000,
-                    "responsive": {
-                        "0": {
-                          "items": 1
-                        },
-                        "768": {
-                          "items": 1
-                        },
-                        "992": {
-                          "items": 1
-                        },
-                        "1200": {
-                          "items": 1
-                        }
-                      }
-                  });
 
-                   // case 6
-                   $('.project-there__carousel').owlCarousel({
-                    "loop": true,
-                    "autoplay": true,
-                    "margin": 0,
-                    nav: true,
-                    navText: [
-                        '<i class="fa-solid fa-angle-left"></i>',
-                        '<i class="fa-solid fa-angle-right"></i>'
-                    ],
-                    "dots": false,
-                    "smartSpeed": 500,
-                    "autoplayTimeout": 10000,
-                    "responsive": {
-                        "0": {
-                          "items": 1
-                        },
-                        "768": {
-                          "items": 1
-                        },
-                        "992": {
-                          "items": 1
-                        },
-                        "1200": {
-                          "items": 1
-                        }
-                      }
-                  });
-
-
-                  $('.tes2-slider').owlCarousel({
-                    "loop": true,
-                    "autoplay": true,
-                    "margin": 0,
-                    "nav": false,
-                    "dots": true,
-                    "smartSpeed": 500,
-                    "autoplayTimeout": 10000,
-                    "responsive": {
-                        "0": {
-                          "items": 1
-                        },
-                        "768": {
-                          "items": 1
-                        },
-                        "992": {
-                          "items": 1
-                        },
-                        "1200": {
-                          "items": 1
-                        }
-                      }
-                  });
 
 
             //testimonial 6
@@ -536,12 +459,7 @@
     });
 
 
-    //Video poppup
-    if ($(".play-btn").length > 0) {
-      $(".play-btn").magnificPopup({
-        type: "iframe",
-      });
-    };
+
 
 
     
@@ -722,19 +640,7 @@ for (let i = 0; i < rippleBtns.length; i++) {
 
 
 
-// line progress bar
 
-let progress = $('#progress1').LineProgressbar({
-  percentage: 100
-});
-
-let progress2 = $('#progress2').LineProgressbar({
-  percentage: 98
-});
-
-let progress3 = $('#progress3').LineProgressbar({
-  percentage: 97
-});
 
 
 if($('.reveal').length){gsap.registerPlugin(ScrollTrigger);let revealContainers=document.querySelectorAll(".reveal");revealContainers.forEach((container)=>{let image=container.querySelector("img");let tl=gsap.timeline({scrollTrigger:{trigger:container,toggleActions:"play none none none"}});tl.set(container,{autoAlpha:1});tl.from(container,1.5,{xPercent:-100,ease:Power2.out});tl.from(image,1.5,{xPercent:100,scale:1.3,delay:-1.5,ease:Power2.out});});}
