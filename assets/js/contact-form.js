@@ -118,6 +118,9 @@
               ? 'Thanks for your interest \u2014 we\u2019ll be in touch if there\u2019s a good fit.'
               : 'Thanks for reaching out \u2014 we\u2019ll get back to you shortly.';
             var title = isMultipart ? 'Application sent!' : 'Message sent!';
+            if (typeof gtag === 'function') {
+              gtag('event', isMultipart ? 'job_application_sent' : 'contact_form_sent');
+            }
             showPopup('ok', title, msg);
             form.reset();
             if (fileLabel) { fileLabel.textContent = 'No file chosen'; }
